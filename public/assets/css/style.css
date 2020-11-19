@@ -1,0 +1,33 @@
+h2{
+    margin-left: 100px;
+    margin-bottom: 30px;
+    font: italic small-caps bold 30px/2 cursive;
+}
+.form-event{
+    background-image: url("https://t2.uc.ltmcdn.com/fr/images/2/5/1/img_comment_faire_un_parchemin_maison_11152_600.jpg");
+    height: 1000px;
+    margin-left: 650px;
+    margin-top: 150px;
+
+
+}
+.form-event{
+    background-repeat: no-repeat;
+}
+.form-group{
+    margin-left: 100px;
+    margin-top: 30px;
+    font: italic small-caps bold 16px/2 cursive;
+}
+.job{
+    margin-left: 150px;
+    margin-top: 50px;
+}
+.btn-submit{
+    margin-left: 150px;
+    margin-top: 30px;
+}
+label{
+    margin-left: 30px;
+    margin-top: 200px;
+}
