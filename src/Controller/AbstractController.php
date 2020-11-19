@@ -35,5 +35,8 @@ abstract class AbstractController
             ]
         );
         $this->twig->addExtension(new DebugExtension());
+        if (isset($_SESSION['role']) && $_SESSION['role'] <> '') {
+            $this->twig->addGlobal('session', $_SESSION['role']);
+        }
     }
 }

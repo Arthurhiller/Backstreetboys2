@@ -11,6 +11,11 @@ Login | {{ parent() }}
 
 {% block content %}
 <div class="login-clean">
+    {% if error is not empty %}
+        <div class="alert alert-{{ error.class }}">
+            {{ error.message }}
+        </div>
+    {% endif %}
     <form method="post">
         <h1 class="text-center">Login</h1>
         <small style="visibility:hidden" class="form-text text-muted">Help text for a form field.</small>
