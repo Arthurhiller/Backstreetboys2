@@ -20,7 +20,8 @@ class LoginController extends AbstractController
             if (is_array($login)) {
                 $_SESSION['role'] = $login['role'];
                 $_SESSION['user_id'] = $login['id'];
-                header('location:/');
+
+                header('location:../user/account');
                 return;
             }
             $error['message'] = 'Erreur de connexion, tes identifiants sont inconnus';
