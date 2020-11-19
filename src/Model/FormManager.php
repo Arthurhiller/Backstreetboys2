@@ -22,7 +22,7 @@ class FormManager extends AbstractManager
     {
         // prepared request
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE .
-        "VALUES (null, :username, :password, :firstname, :lastname, :job, :email, :town)");
+        " VALUES (null, :username, :password, :firstname, :lastname, :job, :email, :town, :role)");
         $statement->bindValue(':username', $users['username'], \PDO::PARAM_STR);
         $statement->bindValue(':password', $users['password'], \PDO::PARAM_STR);
         $statement->bindValue(':firstname', $users['firstname'], \PDO::PARAM_STR);
@@ -30,6 +30,7 @@ class FormManager extends AbstractManager
         $statement->bindValue(':job', $users['job'], \PDO::PARAM_STR);
         $statement->bindValue(':email', $users['email'], \PDO::PARAM_STR);
         $statement->bindValue(':town', $users['town'], \PDO::PARAM_STR);
+        $statement->bindValue(':role', "user", \PDO::PARAM_STR);
 
         if ($statement->execute()) {
             return (int)$this->pdo->lastInsertId();
