@@ -48,4 +48,12 @@ class FormController extends AbstractController
 
         return $this->twig->render('Form/_formRegistration.html.twig');
     }
+
+    public function show(int $id)
+    {
+        $formManager = new FormManager();
+        $users = $formManager->selectOneById($id);
+
+        return $this->twig->render('Form/show.html.twig', ['users' => $users]);
+    }
 }
