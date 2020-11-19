@@ -167,6 +167,11 @@
             ],
             "description": "Symfony HttpClient component",
             "homepage": "https://symfony.com",
+
+            "support": {
+                "source": "https://github.com/symfony/http-client/tree/v5.1.8"
+            },
+
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -243,6 +248,12 @@
                 "interoperability",
                 "standards"
             ],
+
+
+            "support": {
+                "source": "https://github.com/symfony/http-client-contracts/tree/v2.3.1"
+            },
+
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3205,5 +3216,5 @@
         "ext-pdo": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.0.0"
 }
