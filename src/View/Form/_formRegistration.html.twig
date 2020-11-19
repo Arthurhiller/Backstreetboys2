@@ -1,0 +1,56 @@
+{% extends 'layout.html.twig' %} {% block title %} Registration {% endblock %} {% block content %}
+<div class="row">
+
+    <div class="form-event col-4 offset-4">
+
+        <h2> Add your details to join our universe ! </h2>
+
+
+        <form method="post" action="">
+            <div class="form-group">
+                <label for="">Account name: </label>
+                <input type="text" class="form-control" name="login" id="login" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="">Password :</label>
+                <input type="text" class="form-control" name="password" id="password" required/>
+
+            </div>
+
+            <div class="form-group">
+                <label for="">First name : </label>
+                <input type="text" class="form-control" name="first_name" id="first_name" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="">Last name</label>
+                <input type="text" class="form-control" name="last_name" id="last_name" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="">E-mail : </label>
+                <input type="text" class="form-control" name="email" id="email" required/>
+            </div>
+
+            <div class="form-group">
+                <label for="">Town : </label>
+                <input type="text" class="form-control" name="town" id="town" required/>
+            </div>
+
+            <div class="job">
+                <label for="">Job : </label>
+                <select size="1" name="job">
+                    <option value="king" selected>king</option>
+                    <option value="princess">princess</option>
+                    <option value="buffoon">buffoon</option>
+                    <option value="knight">knight</option>
+                    <option value="peasant">peasant</option>
+                  </select>
+            </div>
+
+            <input type="submit" class="btn-submit btn" value="Registration" />
+        </form>
+    </div>
+</div>
+{% endblock %}
