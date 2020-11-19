@@ -21,10 +21,10 @@ class LoginController extends AbstractController
                 $_SESSION['role'] = $login['role'];
                 $_SESSION['user_id'] = $login['id'];
 
-                header('location:../user/account');
+                header('location:/user/account');
                 return;
             }
-            $error['message'] = 'Erreur de connexion, tes identifiants sont inconnus';
+            $error['message'] = 'Error de connexion, Username or Password inccorect !';
             $error['class'] = 'danger';
         }
         return $this->twig->render('Login/login.html.twig', ['error' => $error]);
