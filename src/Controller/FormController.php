@@ -42,8 +42,8 @@ class FormController extends AbstractController
                 'email' => $_POST['email'],
                 'town' => $_POST['town'],
             ];
-            $id = $formManager->insert($users);
-            header('Location:/form/show/' . $id);
+            $formManager->insert($users);
+            header('Location:/login/connection/');
         }
 
         return $this->twig->render('Form/_formRegistration.html.twig');
