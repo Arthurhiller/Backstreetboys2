@@ -17,7 +17,7 @@ class FormController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('User/index.html.twig');
+        return $this->twig->render('Form/_formRegistration.html.twig');
     }
 
     /**
