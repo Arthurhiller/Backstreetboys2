@@ -12,9 +12,19 @@
     {% block stylesheet %}{% endblock %}
     <link rel="icon" href="/assets/images/favicon.png">
 </head>
+<nav>
+    <div class="profil collapse navbar-collapse">
+        <ul class="navbar-nav m-l">
 
+            {% if session is null %}
+                <li class="btn-profil nav-item"><a href="/login/connection">Login</a></li>
+            {% else %}
+                <li class="btn-profil nav-item"><a href="/login/logout">Logout</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
 <body>
-
 {% block content %}{% endblock %}
 {% block javascript %}{% endblock %}
 </body>
