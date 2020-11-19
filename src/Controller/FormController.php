@@ -2,9 +2,9 @@
 
 namespace App\Controller;
 
-use App\Model\UserManager;
+use App\Model\FormManager;
 
-class UserController extends AbstractController
+class FormController extends AbstractController
 {
 
     /**
@@ -32,7 +32,7 @@ class UserController extends AbstractController
     {
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $userManager = new UserManager();
+            $formManager = new FormManager();
             $users = [
                 'username' => $_POST['username'],
                 'password' => $_POST['password'],
@@ -42,10 +42,10 @@ class UserController extends AbstractController
                 'email' => $_POST['email'],
                 'town' => $_POST['town'],
             ];
-            $id = $userManager->insert($users);
-            header('Location:/user/show/' . $id);
+            $id = $formManager->insert($users);
+            header('Location:/form/show/' . $id);
         }
 
-        return $this->twig->render('user/_formRegistration.html.twig');
+        return $this->twig->render('Form/_formRegistration.html.twig');
     }
 }
