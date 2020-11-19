@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\MapsManager;
+
 class HomeController extends AbstractController
 {
     /**
@@ -21,6 +23,9 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $mapsManager = new MapsManager();
+        $maps = $mapsManager->selectAll();
+
+        return $this->twig->render('Home/index.html.twig', ['maps' => $maps]);
     }
 }
