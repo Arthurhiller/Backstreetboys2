@@ -20,14 +20,6 @@ class FormController extends AbstractController
         return $this->twig->render('Form/index.html.twig');
     }
 
-    /**
-     * Display item creation page
-     *
-     * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
-     */
     public function add()
     {
 

@@ -1,0 +1,8 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Depot {{ depot.id }}</h1>
+    <p>{{ depot.username }}. {{ depot.amount }} Ecu</p>
+    <a href="/depot/delete/{{depot.id}}">Delete</a>
+    <a href="/depot/index">Back</a>
+{% endblock %}

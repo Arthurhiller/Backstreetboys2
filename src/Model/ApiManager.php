@@ -26,6 +26,7 @@ class ApiManager extends AbstractManager
     public function convert()
     {
         $client = HttpClient::create();
+
         $response = $client->request('GET', 'https://metals-api.com/api/latest?access_key=dzelq5c65pzrysvzhykl9tqpevf038hei2zv40r3l28an79i8j7ndvtbs88d&base=EUR&symbols=XAU');
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
