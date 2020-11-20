@@ -52,4 +52,14 @@ class ApiManager extends AbstractManager
             return (int)$this->pdo->lastInsertId();
         }
     }
+
+    public function wallet(array $ecu)
+    {
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM " . self::TABLE . " WHERE price=:price"
+        );
+        $statement->bindValue('price', $ecu['price'], \PDO::PARAM_INT);
+        $statement->execute();
+        return $statement->fetch();
+    }
 }
