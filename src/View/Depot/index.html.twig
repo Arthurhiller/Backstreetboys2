@@ -4,7 +4,21 @@
     <h1>Depots</h1>
     <ul>
         {% for depot in depots %}
-            <li><a href="/item/show/{{ depot.id }}">{{ depot.username }}. {{ depot.amount }}</a></li>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Username</th>
+                    <th scope="col">Amount</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{ depot.username }}</td>
+                    <td>{{ depot.amount }} Ecu</td>
+                </tr>
+            </table>
         {% else %}
             <li>Nothing to display</li>
         {% endfor %}
