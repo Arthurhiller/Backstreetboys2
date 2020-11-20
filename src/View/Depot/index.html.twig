@@ -1,0 +1,13 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <h1>Depots</h1>
+    <ul>
+        {% for depot in depots %}
+            <li><a href="/item/show/{{ depot.id }}">{{ depot.username }}. {{ depot.amount }}</a></li>
+        {% else %}
+            <li>Nothing to display</li>
+        {% endfor %}
+    </ul>
+    <a href="/depot/add">Add</a>
+{% endblock %}
