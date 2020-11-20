@@ -1,12 +1,10 @@
 {% extends 'layout.html.twig' %}
+{% block content %}
+{{ dump(forms.timestamp) }}
+    <hr/>
 
-{% block title %}
-    EcuWallet | {{ parent() }}
-{% endblock %}
-
-{% block stylesheet %}
-    {{ parent() }}
-
+    {{ dump(forms) }}
+    <h1>Hello Wilder !</h1>
 {% endblock %}
 
 {% block content %}
