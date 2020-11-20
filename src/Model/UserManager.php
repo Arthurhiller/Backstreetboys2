@@ -23,6 +23,16 @@ class UserManager extends AbstractManager
         return $statement->fetch();
     }
 
+    public function id(array $login)
+    {
+        $statement = $this->pdo->prepare(
+            "SELECT * FROM " . self::TABLE . " WHERE id=:id"
+        );
+        $statement->bindValue('id', $login['id'], \PDO::PARAM_STR);
+        $statement->execute();
+        return $statement->fetch();
+    }
+
     public function insert(array $user): int
     {
         $statement = $this->pdo->prepare(

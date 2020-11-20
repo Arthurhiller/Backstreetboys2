@@ -14,12 +14,19 @@ use Symfony\Component\HttpClient\HttpClient;
 /**
  *
  */
-class ApiManager
+class ApiManager extends AbstractManager
 {
-    public function selectAll()
+    public const TABLE = 'wallet';
+
+    public function __construct()
+    {
+        parent::__construct(self::TABLE);
+    }
+
+    public function convert()
     {
         $client = HttpClient::create();
-        $response = $client->request('GET', 'https://metals-api.com/api/latest?access_key=y14gqy2xk57w6k2pg8m0d8m46lc5zi7j57o6w3zl6odz6pym5pucqfjs18z7&base=USD&symbols=XAU,XAG');
+        $response = $client->request('GET', 'https://metals-api.com/api/latest?access_key=dzelq5c65pzrysvzhykl9tqpevf038hei2zv40r3l28an79i8j7ndvtbs88d&base=EUR&symbols=XAU');
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
 
@@ -28,6 +35,20 @@ class ApiManager
             $content = $response->toArray();
             // convert the response (here in JSON) to an PHP array
             return $content;
+        }
+    }
+
+    public function insert(array $gold): int
+    {
+        $statement = $this->pdo->prepare(
+            "INSERT INTO wallet (`client_id`,`poids`, `price`) VALUES (:client_id, :poids, :price)"
+        );
+        $statement->bindValue('client_id', $gold['client_id'], \PDO::PARAM_INT);
+        $statement->bindValue('poids', $gold['poids'], \PDO::PARAM_INT);
+        $statement->bindValue('price', $gold['price'], \PDO::PARAM_INT);
+
+        if ($statement->execute()) {
+            return (int)$this->pdo->lastInsertId();
         }
     }
 }
