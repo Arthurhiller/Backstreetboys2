@@ -1,12 +1,10 @@
-{% extends 'layout.html.twig' %}
-
 {% block content %}
-<form method="post" action="">
-    <div class="form-group">
-        <label for="">Weight of gold: </label>
-        <input type="text" class="form-control" name="poids" id="poids" required>
-    </div>
-    <input type="submit" class="btn-submit btn" value="Go" />
-</form>
+
+    <h1>Deposite {{ wallet.client_id }}</h1>
+    <p>{{ wallet.poids }}. {{ wallet.price }} </p>
+    <a href="/api/index">Back</a>
+
+
+
     {{ dump(currencies.rates) }}
 {% endblock %}
