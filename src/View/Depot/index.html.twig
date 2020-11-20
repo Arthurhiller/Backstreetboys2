@@ -1,27 +1,29 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Depots</h1>
-    <ul>
+    <div class="container text-center">
+        <div class="card text-center border-successory mb-4">
+            <div class="card-header">
+                <h4 class="card-title">Depot ECUWALLET</h4>
+            </div>
+        </div>
         {% for depot in depots %}
-            <table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Amount</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>{{ depot.username }}</td>
-                    <td>{{ depot.amount }} Ecu</td>
-                </tr>
-            </table>
-        {% else %}
-            <li>Nothing to display</li>
-        {% endfor %}
-    </ul>
-    <a href="/depot/add">Add</a>
+
+     <div class="container">
+         <div class="card text-center border-successory mb-3">
+             <div class="card-header">
+                 Depot for {{ depot.username }}
+             </div>
+             <div class="card-body border-successory mb-3">
+                 <h5 class="card-title"> Amount </h5>
+                 <p class="card-text">{{ depot.amount }} ECU</p>
+             </div>
+
+         </div>
+     </div>
+ {% endfor %}
+    <div class="container text-right">
+    <a class="btn btn-primary btn-md" href="/depot/add/" role="button">Add Depot</a>
+    </div>
+
 {% endblock %}
