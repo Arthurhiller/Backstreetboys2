@@ -1,0 +1,15 @@
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/12/41/desk-1869579_1280.jpg);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: italic small-caps bold;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-family: italic small-caps bold;
+}

@@ -149,3 +149,15 @@ nav a:visited{
     padding-right: 10vw;
 }
 /*FIN HEADER*/
+
+.form-group-depot h6{
+    padding-right: 100px;
+}
+
+.form-group-depot input{
+    margin-bottom: 20px;
+}
+
+.form-group-depot label{
+    margin-top: 20px;
+}

@@ -1,11 +1,46 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-<form method="post">
-    <div class="form-group">
-        <label for="">Weight of gold(Ounces):</label>
-        <input type="text" class="form-control" name="poids" id="poids" required>
+<div class="container">
+    <!-- For demo purpose -->
+    <div class="row mb-4">
+        <div class="col-lg-6 mx-auto text-center" style="margin-top: 10px">
+            <h1 class="display-4">EcuWallet Payment</h1>
+        </div>
+    </div> <!-- End -->
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <div class="card ">
+                <div class="card-header">
+                    <div class="bg-white shadow-sm pt-4 pl-1 pr-1 pb-1">
+                        <!-- Credit card form tabs -->
+                        <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                            <li class="nav-item nav-link active"><i class="fas fa-credit-card mr-3"></i> Gold To Ecu</li>
+                        </ul>
+                    </div> <!-- End -->
+                    <!-- Credit card form content -->
+                    <div class="tab-content">
+                        <!-- credit card info-->
+                        <div id="credit-card" class="">
+                            <form role="form" method="post">
+                                <div class="form-group-depot"> <div for="username">
+                                        <h6>Gold Owner</h6>
+                                    </label> <input type="text" name="username" placeholder="Firstname" required class="form-depot" style="width: 300px">
+                                    <input type="text" name="username" placeholder="Lastname" required class="form-depot" style="width: 300px"></div>
+                                <div class="form-group-depot"> <label for="poids">
+                                        <h6>Amount of gold</h6>
+                                    </label>
+                                    <input type="text" name="poids" placeholder="Amount" class="form-depot" style="width: 300px" required>
+                                </div>
+                                    <div class="card-footer"> <button type="submit" class="subscribe btn btn-primary btn-block shadow-sm"> Confirm Payment </button></div>
+                            </form>
+                        </div>
+                        </div>
+                    </div> <!-- End -->
+                    <!-- End -->
+            </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <input type="submit" class="btn-submit btn" value="Deposit" />
-</form>
 {% endblock %}
