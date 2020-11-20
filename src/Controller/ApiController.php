@@ -10,14 +10,34 @@
 namespace App\Controller;
 
 use App\Model\ApiManager;
+use App\Model\UserManager;
 
-class ApiController extends AbstractAPIController
+class ApiController extends AbstractController
 {
     public function index()
     {
-        $apiManager = new ApiManager();
-        $currencies = $apiManager->selectAll();
+        if ($_SESSION['role'] === 'user') {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                $apiManager = new ApiManager();
+                $currencies = $apiManager->convert();
+                $price = $_POST['poids'] * $currencies[1];
+                $wallet = [
+                    'client_id' => $_SESSION['user_id'],
+                    'poids' => $_POST['poids'],
+                    'price' => $price,
+                ];
+                $apiManager->insert($wallet);
+                header('Location:/login/connection/');
+            }
+            return $this->twig->render('Api/add.html.twig');
+        }
+    }
 
-        return $this->twig->render('Home/index.html.twig', ['currencies' => $currencies]);
+    public function show()
+    {
+        $apiManager = new ApiManager();
+        $currencies = $apiManager->convert();
+
+        return $this->twig->render('Api/show.html.twig', ['currencies'=> $currencies]);
     }
 }

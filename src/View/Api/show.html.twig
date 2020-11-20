@@ -1,0 +1,12 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<form method="post" action="">
+    <div class="form-group">
+        <label for="">Weight of gold: </label>
+        <input type="text" class="form-control" name="poids" id="poids" required>
+    </div>
+    <input type="submit" class="btn-submit btn" value="Go" />
+</form>
+    {{ dump(currencies.rates) }}
+{% endblock %}
