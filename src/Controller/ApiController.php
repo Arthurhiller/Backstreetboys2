@@ -10,7 +10,6 @@
 namespace App\Controller;
 
 use App\Model\ApiManager;
-use App\Model\UserManager;
 
 class ApiController extends AbstractController
 {

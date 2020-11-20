@@ -161,3 +161,12 @@ nav a:visited{
 .form-group-depot label{
     margin-top: 20px;
 }
+
+.nav-gold{
+    background-color: #343a40;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    color: goldenrod;
+    font-family: italic small-caps bold;
+}
