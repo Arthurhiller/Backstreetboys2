@@ -15,9 +15,23 @@ body{
     margin-top: 80px;
     background-repeat: no-repeat;
 }
+
+.login-clean{
+    background-image: url("https://st4.depositphotos.com/1790417/29920/i/1600/depositphotos_299206352-stock-photo-papyrus-scrolls-on-a-table.jpg");
+    background-repeat: no-repeat;
+}
+
 .btn-submit{
    margin-left: 270px;
     margin-top: 80px;
+}
+
+.form-group-user{
+    height: 40px;
+    width: 150px;
+    margin-top: 60px;
+    margin-left: 170px;
+    font: italic small-caps bold 16px/1 cursive;
 }
 
 .form-groupp{
@@ -49,12 +63,13 @@ label{
 .form-controll{
     font: italic small-caps bold 16px/1 cursive;
     margin-top: 150px;
+    margin-right: 60px;
     display: block;
 
 }
 .text-center{
     font: italic small-caps bold 35px/1 cursive;
-    margin-top: 260px;
+    margin-top: 140px;
 }
 .text{
     font: italic small-caps bold 40px/1 cursive;
@@ -90,11 +105,10 @@ h2{
 }
 
 .form-group{
-    position: absolute;
-    margin-left: 180px;
+    width: 150px;
     margin-top: 60px;
+    margin-left: 170px;
     font: italic small-caps bold 16px/1 cursive;
-    display: block;
 }
 .form-control {
     margin-left: 20px;
@@ -112,6 +126,7 @@ h2{
     background-color: black;
     height: 100vw;
 }
+
 nav ul {
     text-align: center;
     list-style-type: none;
