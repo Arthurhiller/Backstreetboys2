@@ -41,11 +41,4 @@ class ApiController extends AbstractController
         return $this->twig->render('Api/show.html.twig', ['currencies'=> $currencies]);
     }
 
-    public function showallet()
-    {
-        $apiManager = new ApiManager();
-        $ecu = $apiManager->selectAll();
-
-        return $this->twig->render('View/header.html.twig', ['ecu'=> $ecu]);
-    }
 }

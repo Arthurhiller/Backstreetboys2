@@ -2,17 +2,11 @@
 
 {% block content %}
     <div class="container text-center">
-        <div class="card text-center border-successory mb-4">
-            <div class="card-header">
-                <h4 class="card-title">Depot ECUWALLET</h4>
-            </div>
-        </div>
         {% for depot in depots %}
-
      <div class="container">
          <div class="card text-center border-successory mb-3">
              <div class="card-header">
-                 Depot for {{ depot.username }}
+                 ECUWALLET of {{ depot.username }}
              </div>
              <div class="card-body border-successory mb-3">
                  <h5 class="card-title"> Amount </h5>
