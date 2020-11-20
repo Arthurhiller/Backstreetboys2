@@ -20,7 +20,7 @@ class ApiController extends AbstractController
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $apiManager = new ApiManager();
                 $currencies = $apiManager->convert();
-                $price = $_POST['poids'] * $currencies[1];
+                $price = $_POST['poids'] * intval($currencies['rates']['XAU']);
                 $wallet = [
                     'client_id' => $_SESSION['user_id'],
                     'poids' => $_POST['poids'],

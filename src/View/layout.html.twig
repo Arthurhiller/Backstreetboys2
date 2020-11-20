@@ -13,11 +13,14 @@
 </head>
 <nav>
     <div class="profil collapse navbar-collapse">
+        <a class="navbar-brand" href="/#"><img class="logo" src="/assets/images/logowallet.png" alt="logo ecuwallet" width="120px"/></a>
         <ul class="navbar-nav m-l">
-
+            <li class="btn-profil nav-item"><a href="/home/index">Home</a></li>
             {% if session is null %}
                 <li class="btn-profil nav-item"><a href="/login/connection">Login</a></li>
             {% else %}
+                <li class="btn-profil nav-item"><a href="/api/index">Deposit</a></li>
+                <li class="btn-profil nav-item"><a href="/user/account">Account</a></li>
                 <li class="btn-profil nav-item"><a href="/login/logout">Logout</a></li>
             {% endif %}
         </ul>

@@ -3,6 +3,11 @@ h2{
     margin-bottom: 30px;
     font: italic small-caps bold 30px/2 cursive;
 }
+
+body{
+    margin: 0;
+}
+
 .form-event{
     background-image: url("https://t2.uc.ltmcdn.com/fr/images/2/5/1/img_comment_faire_un_parchemin_maison_11152_600.jpg");
     height: 10000px;
@@ -68,3 +73,37 @@ tr{
     margin-left: 130px;
     margin-top: 10px;
 }
+
+/*HEADER*/
+.profil{
+    padding-top: 3vw;
+    background-color: black;
+    height: 6vw;
+}
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    color: white;
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:visited{
+    color: white;
+}
+
+.logo {
+    top: 0;
+    position: absolute;
+    padding-left: 3vw;
+    padding-right: 10vw;
+}
+/*FIN HEADER*/
