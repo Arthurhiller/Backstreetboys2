@@ -3,12 +3,6 @@
 {% block title %}
 Login | {{ parent() }}
 {% endblock %}
-
-{% block stylesheet %}
-    {{ parent() }}
-    <link rel="stylesheet" href="../assets/css/Login-Form-Clean.css">
-{% endblock %}
-
 {% block content %}
 <div class="login-clean">
     {% if error is not empty %}
@@ -16,9 +10,11 @@ Login | {{ parent() }}
             {{ error.message }}
         </div>
     {% endif %}
+    <div class="form-event col-4 offset-4">
     <form method="post">
-        <h1 class="text-center">Login</h1>
+        <h1 class="text">Login</h1>
         <small style="visibility:hidden" class="form-text text-muted">Help text for a form field.</small>
+        <link rel="stylesheet" href="/assets/css/style.css">
         <div class="form-group">
             <input class="form-control" type="username" name="username" placeholder="Username">
         </div>
@@ -30,11 +26,11 @@ Login | {{ parent() }}
         </div>
         <a class="forgot" style="visibility:hidden" href="#">Forgot password ?</a>
     </form>
-    <h2>Pas encore de compte ?</h2>
-    <a href="/form/add">
-        <button type="submit" name=submit class="btn-submit btn">
-            C'est par ici
-        </button>
+    <h2 class="text-center">For inscription
+    <a href="/form/add"><button type="submit" name=submit>click her</button>
     </a>
+    </a>
+    </h2>
 </div>
+    </div>
 {% endblock %}
