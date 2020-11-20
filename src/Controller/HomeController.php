@@ -9,7 +9,7 @@
 
 namespace App\Controller;
 
-use App\Model\ApiManager;
+use App\Model\UserManager;
 
 class HomeController extends AbstractController
 {
@@ -23,6 +23,11 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $userManager = new UserManager();
+        $forms = $userManager->selectAll();
+
+        return $this->twig->render('Home/index.html.twig', ['forms' => $forms]);
     }
+
+
 }
