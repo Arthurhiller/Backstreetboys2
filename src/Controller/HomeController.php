@@ -9,7 +9,7 @@
 
 namespace App\Controller;
 
-use App\Model\FormManager;
+use App\Model\ApiManager;
 
 class HomeController extends AbstractController
 {
@@ -23,8 +23,8 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        $formManager = new FormManager();
-        $forms = $formManager->selectAll();
+        $apiManager = new ApiManager();
+        $forms = $apiManager->selectAll();
 
         return $this->twig->render('Home/index.html.twig', ['forms' => $forms]);
     }
