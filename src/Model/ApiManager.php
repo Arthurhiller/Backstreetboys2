@@ -19,7 +19,8 @@ class ApiManager
     public function selectAll()
     {
         $client = HttpClient::create();
-        $response = $client->request('GET', 'https://metals-api.com/api/latest?access_key=y14gqy2xk57w6k2pg8m0d8m46lc5zi7j57o6w3zl6odz6pym5pucqfjs18z7&base=USD&symbols=XAU,XAG');
+        $response = $client->request('GET', 'https://metals-api.com/api/latest?access_key=y14gqy2xk57w6k2pg8m0d
+        8m46lc5zi7j57o6w3zl6odz6pym5pucqfjs18z7&base=USD&symbols=XAU,XAG');
 
         $statusCode = $response->getStatusCode(); // get Response status code 200
 
