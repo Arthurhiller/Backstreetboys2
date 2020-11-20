@@ -1,44 +1,45 @@
 {% extends 'layout.html.twig' %} {% block title %} Registration {% endblock %} {% block content %}
+    {% block stylesheet %}<link rel="stylesheet" href="/assets/css/test.css">{% endblock %}
 <div class="row">
 
-    <div class="form-event">
+    <div class="form-registration col-5 offset-5">
 
-        <h2 class="textt"> Add your for join EMPIRE! </h2>
+        <h2 class="textt" style="color: white"> Add your for join EMPIRE! </h2>
 
 
         <form method="post" action="">
-            <div class="form-group">
+            <div class="form-group-user">
                 <label for="">Account name: </label>
                 <input type="text" class="form-control" size="13" name="username" id="username" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-user">
                 <label for="">Password :</label>
                 <input type="text" class="form-control"  size="13" name="password" id="password" required>
 
             </div>
 
-            <div class="form-group">
+            <div class="form-group-user">
                 <label for="">First name : </label>
                 <input type="text" class="form-control" size="13" name="firstname" id="firstname" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-user">
                 <label for="">Last name :</label>
                 <input type="text" class="form-control" size="13" name="lastname" id="lastname" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-user">
                 <label for="">E-mail : </label>
                 <input type="text" class="form-control" size="13" name="email" id="email" required>
             </div>
 
-            <div class="form-group">
+            <div class="form-group-user">
                 <label for="">Town : </label>
                 <input type="text" class="form-control" size="13" name="town" id="town" required>
             </div>
 
-            <div class="job">
+            <div class="form-group-user">
                 <label for="">Job : </label>
                 <select size="1" name="job" required>
                     <option value="king" selected>king</option>
@@ -49,7 +50,7 @@
                   </select>
             </div>
 
-            <input type="submit" class="btn-submit btn" value="Registration" />
+            <input type="submit" class="btn-submit btn" value="Registration" style="color: white"/>
         </form>
     </div>
 </div>
