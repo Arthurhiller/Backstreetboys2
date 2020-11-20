@@ -3,6 +3,11 @@
     margin-bottom: 200px;
     font: italic small-caps bold 30px/2 cursive;
 }
+
+body{
+    margin: 0;
+}
+
 .form-event{
     background-image: url("https://images-ext-1.discordapp.net/external/JcqI1nNzVkiyOWFMRN_oYJtoY0N334hmu1mic-arzX0/https/st.depositphotos.com/1647366/4390/v/950/depositphotos_43906075-stock-illustration-knight-shield-silhouette-ornament.jpg?width=639&height=666");
     height: 1000px;
@@ -86,3 +91,42 @@ h2{
     margin-left: 20px;
     font: italic small-caps bold 16px/1 cursive;
 }
+
+.btn-submiit{
+    margin-left: 130px;
+    margin-top: 10px;
+}
+
+/*HEADER*/
+.profil{
+    padding-top: 3vw;
+    background-color: black;
+    height: 6vw;
+}
+nav ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    color: white;
+    display: inline;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav a:visited{
+    color: white;
+}
+
+.logo {
+    top: 0;
+    position: absolute;
+    padding-left: 3vw;
+    padding-right: 10vw;
+}
+/*FIN HEADER*/
